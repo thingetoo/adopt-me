@@ -1,0 +1,27 @@
+.dog-container {
+    width: 85vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 35px;
+    margin-top: 50px;
+}
+
+.card {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card h4 {
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    height: auto;
+    width: auto;
+}
