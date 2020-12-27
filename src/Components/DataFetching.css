@@ -14,11 +14,13 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .card h4 {
     width: 100%;
     text-align: center;
+    background-color: grey;
 }
 
 img {
