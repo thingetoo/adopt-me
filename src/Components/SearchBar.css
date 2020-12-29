@@ -1,4 +1,10 @@
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.bar-and-text {
+    width: auto;
+    text-align: center;
 }

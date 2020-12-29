@@ -1,17 +1,21 @@
 import React from "react";
+import "./SearchBar.css";
 
-const SearchBar = () => {
+export const SearchBar = ({ placeholder, handleChange }) => {
   return (
-    <div>
-      <label className="container">
-        <div className="bar-and-text">
-          Find your breed:
-          <form action="search">
-            <input type="text" name="search" id="dog-search" />
-          </form>
-        </div>
-      </label>
-    </div>
+    <label className="container">
+      <div className="bar-and-text">
+        Find your breed:
+        <form action="search">
+          <input
+            className="search"
+            type="search"
+            placeholder={placeholder}
+            onChange={handleChange}
+          />
+        </form>
+      </div>
+    </label>
   );
 };
 
