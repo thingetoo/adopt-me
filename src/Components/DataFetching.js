@@ -8,7 +8,7 @@ function DataFetching() {
   const [animals, setAnimals] = useState([]);
   const [search, setSearch] = useState("");
   const url =
-    "https://api.rescuegroups.org/v5/public/animals/search/available/dogs/?limit=20";
+    "https://api.rescuegroups.org/v5/public/animals/search/available/dogs/?limit=50";
   const apiKey = "gB1Bhyy4";
   const headers = {
     "Content-Type": "application/vnd.api+json;charset=UTF-8",
@@ -30,9 +30,17 @@ function DataFetching() {
   function handleChange(e) {
     setSearch(e.target.value);
   }
-  return animals === null ? (
-    <div>Loading your future pet...</div>
-  ) : (
+
+  if (filteredAnimals.length === 0) {
+    return (
+      <div className="fetch">
+        <SearchBar handleChange={handleChange} placeholder="search breeds" />
+        <h1 style={{ textAlign: "center" }}>Loading results...</h1>
+      </div>
+    );
+  }
+
+  return (
     <div className="fetch">
       <SearchBar handleChange={handleChange} placeholder="search breeds" />
       <div className="dog-container">

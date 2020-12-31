@@ -1,3 +1,9 @@
+.fetch{
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
 .dog-container {
     width: 85vw;
     margin: auto;
@@ -8,13 +14,14 @@
 }
 
 .card {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     background-color: #fac274;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .card h4 {
@@ -23,7 +30,4 @@
     background-color: grey;
 }
 
-img {
-    height: auto;
-    width: auto;
-}
+
