@@ -2,9 +2,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 10px;
 }
 
 .bar-and-text {
     width: auto;
     text-align: center;
+    font-size: 1.75rem;
+}
+
+.search {
+    text-align: center
 }

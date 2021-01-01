@@ -48,15 +48,15 @@ header .overlay {
 }
 
 .display-3, .lead {
-    color: white;
+    color: rgba(148, 187, 233, 0.8);
     text-align: center;
 }
 
-@media (pointer: coarse) and (hover: none) {
+/* @media (pointer: coarse) and (hover: none) {
   header {
     background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
   }
   header video {
     display: none;
   }
-}
+} */
