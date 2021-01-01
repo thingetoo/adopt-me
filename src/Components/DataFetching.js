@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { SearchBar } from "./SearchBar";
+import { CardList } from "./CardList";
 
 import "./DataFetching.css";
 
@@ -31,11 +32,20 @@ function DataFetching() {
     setSearch(e.target.value);
   }
 
-  if (filteredAnimals.length === 0) {
+  if (!filteredAnimals.length && search !== "") {
     return (
       <div className="fetch">
         <SearchBar handleChange={handleChange} placeholder="search breeds" />
-        <h1 style={{ textAlign: "center" }}>Loading results...</h1>
+        <h1 style={{ textAlign: "center" }}>No Results</h1>
+      </div>
+    );
+  }
+
+  if (!filteredAnimals.length) {
+    return (
+      <div className="fetch">
+        <SearchBar handleChange={handleChange} placeholder="search breeds" />
+        <h1 style={{ textAlign: "center" }}>Loading...</h1>
       </div>
     );
   }
@@ -43,17 +53,7 @@ function DataFetching() {
   return (
     <div className="fetch">
       <SearchBar handleChange={handleChange} placeholder="search breeds" />
-      <div className="dog-container">
-        {filteredAnimals.map((animal) => (
-          <div className="card" key={animal.id}>
-            <img
-              src={animal.attributes.pictureThumbnailUrl}
-              alt={animal.attributes.breedPrimary}
-            />
-            <h4>{animal.attributes.breedPrimary}</h4>
-          </div>
-        ))}
-      </div>
+      <CardList filteredAnimals={filteredAnimals} />
     </div>
   );
 }
