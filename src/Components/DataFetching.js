@@ -36,7 +36,14 @@ function DataFetching() {
     return (
       <div className="fetch">
         <SearchBar handleChange={handleChange} placeholder="search breeds" />
-        <h1 style={{ textAlign: "center" }}>No Results</h1>
+        <h1
+          style={{
+            textAlign: "center",
+            marginTop: "50px",
+          }}
+        >
+          No Results
+        </h1>
       </div>
     );
   }

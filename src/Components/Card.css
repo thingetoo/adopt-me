@@ -7,10 +7,12 @@
     align-items: center;
     background-color: #94BBE9;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 5px;
 }
 
 .card h4 {
     width: 100%;
     text-align: center;
-    background-color: grey;
+    background-color: rgba(238,174,202,0.6);
+    color: #22558f;
 }
