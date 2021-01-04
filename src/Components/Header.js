@@ -1,5 +1,6 @@
 import React from "react";
 import video from "../assets/dog-stare.mp4";
+import { Navigation } from "./Navigation";
 
 import "./Header.css";
 
@@ -15,7 +16,8 @@ const Header = () => {
       >
         <source src={video} type="video/mp4" />
       </video>
-      <div className="container-o ">
+      <Navigation />
+      <div className="container-o">
         <div className="">
           <div className="w-100 text-white ">
             <h1 className="main-title w-100 display-3">ADOPT ME</h1>
